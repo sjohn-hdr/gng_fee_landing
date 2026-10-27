@@ -1,7 +1,18 @@
 :root {
+  --canvas: #121212;
+  --line: #363636;
+  --line-strong: #515151;
+  --text: #f0f0f0;
+  --text-muted: #b0b0b0;
+  --text-dim: #858585;
+  --action: #dedede;
+  --action-hover: #f2f2f2;
+  --action-text: #171717;
+  --focus: #f5f5f5;
+
   font-family: Aptos, "Segoe UI", sans-serif;
-  color: #eceef0;
-  background: #111315;
+  color: var(--text);
+  background: var(--canvas);
   color-scheme: dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,6 +28,12 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
+  background:
+    linear-gradient(rgb(255 255 255 / 1.5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 1.5%) 1px, transparent 1px),
+    radial-gradient(ellipse 75% 48% at 50% 0%, #252525 0%, transparent 100%),
+    var(--canvas);
+  background-size: 56px 56px, 56px 56px, auto, auto;
 }
 
 #root {

@@ -1,14 +1,19 @@
-export const applications = [
+type Application = {
+  id: string
+  name: string
+  url: string
+  description?: string
+}
+
+export const applications: Application[] = [
   {
     id: 'gng',
-    name: 'GNG',
-    description: 'Go/No-Go application for HDR employees.',
-    url: 'https://gng.example.com',
+    name: 'GNG APP',
+    url: 'https://hdr-gng-app-testing.azurewebsites.net/',
   },
   {
     id: 'fee',
-    name: 'FEE',
-    description: 'Fee application for HDR employees.',
+    name: 'FEE APP',
     url: 'https://fee.example.com',
   },
 ] as const
