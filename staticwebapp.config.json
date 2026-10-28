@@ -1,4 +1,24 @@
 {
+  "auth": {
+    "identityProviders": {
+      "customOpenIdConnectProviders": {
+        "hdr": {
+          "registration": {
+            "clientIdSettingName": "HDR_ENTRA_CLIENT_ID",
+            "clientCredential": {
+              "clientSecretSettingName": "HDR_ENTRA_CLIENT_SECRET"
+            },
+            "openIdConnectConfiguration": {
+              "wellKnownOpenIdConfiguration": "https://login.microsoftonline.com/3667e201-cbdc-48b3-9b42-5d2d3f16e2a9/v2.0/.well-known/openid-configuration"
+            }
+          },
+          "login": {
+            "scopes": ["openid", "profile", "email"]
+          }
+        }
+      }
+    }
+  },
   "routes": [
     {
       "route": "/*",
@@ -8,7 +28,7 @@
   "responseOverrides": {
     "401": {
       "statusCode": 302,
-      "redirect": "/.auth/login/aad"
+      "redirect": "/.auth/login/hdr"
     }
   }
 }
