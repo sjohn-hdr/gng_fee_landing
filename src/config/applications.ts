@@ -14,6 +14,6 @@ export const applications: Application[] = [
   {
     id: 'fee',
     name: 'FEE APP',
-    url: 'https://fee.example.com',
+    url: 'https://hdr-fee-app-testing.azurewebsites.net/',
   },
 ] as const
